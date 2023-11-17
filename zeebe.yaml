@@ -6,7 +6,7 @@ metadata:
   name: zeebe
 spec:
   containers:
-  - image: camunda/zeebe:${CAMUNDA_PLATFORM_VERSION}
+  - image: camunda/zeebe:latest
     name: zeebe
     volumeMounts:
       - mountPath: /usr/local/zeebe/data
