@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: zeebe
+  name: zeebe
+spec:
+  containers:
+  - image: camunda/zeebe:${CAMUNDA_PLATFORM_VERSION}
+    name: zeebe
+    volumeMounts:
+      - mountPath: /usr/local/zeebe/data
+        name: zeebe
+  volumes:
+  - name: zeebe
+    emptyDir:
+      sizeLimit: 50Mi
