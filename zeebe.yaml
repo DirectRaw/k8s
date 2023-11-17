@@ -13,5 +13,3 @@ spec:
         name: zeebe
   volumes:
   - name: zeebe
-    emptyDir:
-      sizeLimit: 50Mi
